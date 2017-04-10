@@ -25,8 +25,9 @@ dependencies {
     
     // Since we are going to use databases
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    //compile("org.springframework.data:spring-data-rest-hal-browser")
     runtime("com.h2database:h2")
-    
+
     
     // The production code uses the SLF4J logging API at compile time
     //compile 'org.slf4j:slf4j-api:1.7.21'
