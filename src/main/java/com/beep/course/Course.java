@@ -6,13 +6,18 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import com.beep.core.BaseEntity;
 import com.beep.review.Review;
 
 @Entity
-public class Course extends BaseEntity{
+public class Course extends BaseEntity{  
 
+	// Validates the title text !!!
+	@NotNull
+	@Size(min=2, max=240)
 	private String title;
 	private String url;
 	
