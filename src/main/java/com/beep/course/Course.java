@@ -17,7 +17,7 @@ public class Course extends BaseEntity{
 	private String url;
 	
 	// DB Relations
-	@OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "course", cascade = CascadeType.ALL) 
 	private List<Review> reviews;
 	
 	// Constructors

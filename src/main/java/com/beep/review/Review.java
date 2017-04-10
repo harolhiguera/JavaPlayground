@@ -11,7 +11,7 @@ public class Review extends BaseEntity{
 	
 
 	private int rating;
-	private String deacriptiopn;
+	private String description;
 	
 	// DB Relations
 	@ManyToOne
@@ -23,10 +23,10 @@ public class Review extends BaseEntity{
 	}
 
 	// Constructors
-	public Review(int rating, String deacriptiopn) {
+	public Review(int rating, String description) {
 		super();
 		this.rating = rating;
-		this.deacriptiopn = deacriptiopn;
+		this.description = description;
 	}
 	
 	// Course
@@ -44,12 +44,13 @@ public class Review extends BaseEntity{
 		this.rating = rating;
 	}
 	// Description
-	public String getDeacriptiopn() {
-		return deacriptiopn;
+	public String getDescription() {
+		return description;
 	}
-	public void setDeacriptiopn(String deacriptiopn) {
-		this.deacriptiopn = deacriptiopn;
+	public void setDescription(String description) {
+		this.description = description;
 	}
+	
 }
 
 
