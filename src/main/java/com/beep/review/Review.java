@@ -5,6 +5,7 @@ import javax.persistence.ManyToOne;
 
 import com.beep.core.BaseEntity;
 import com.beep.course.Course;
+import com.beep.users.User;
 
 @Entity
 public class Review extends BaseEntity{
@@ -16,6 +17,10 @@ public class Review extends BaseEntity{
 	// DB Relations
 	@ManyToOne
 	private Course course;
+	@ManyToOne // Because one user can have many reviews
+	private User reviewer;
+	
+	
 	// TODO: Duplication of the code for every single entity
 	protected Review(){
 		// In case we need to change something specific in all the entities that extend BaseEntity
@@ -50,6 +55,16 @@ public class Review extends BaseEntity{
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	// User (Reviewer)
+
+	public User getReviewer() {
+		return reviewer;
+	}
+
+	public void setReviewer(User reviewer) {
+		this.reviewer = reviewer;
+	}
+	
 	
 }
 
